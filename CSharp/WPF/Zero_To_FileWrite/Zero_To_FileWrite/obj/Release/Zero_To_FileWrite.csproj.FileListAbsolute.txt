@@ -1,0 +1,5 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Release\FileBinaryZero.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Release\FileBinaryZero.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Release\FileBinaryZero.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\Release\FileBinaryZero.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\Release\FileBinaryZero.pdb

@@ -1,0 +1,12 @@
+C:\Users\Sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.exe.config
+C:\Users\Sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.exe
+C:\Users\Sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.pdb
+C:\Users\Sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.exe
+C:\Users\Sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.pdb
+C:\Users\Sapphire\Documents\Visual Studio 2015\Projects\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\Debug\File_Log_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\Debug\File_Log_Demo.pdb

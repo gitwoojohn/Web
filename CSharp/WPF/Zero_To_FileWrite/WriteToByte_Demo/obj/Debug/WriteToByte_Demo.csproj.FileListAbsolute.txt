@@ -1,0 +1,12 @@
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.exe.config
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.pdb
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.csprojResolveAssemblyReference.cache
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\Debug\WriteToByte_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\Debug\WriteToByte_Demo.pdb

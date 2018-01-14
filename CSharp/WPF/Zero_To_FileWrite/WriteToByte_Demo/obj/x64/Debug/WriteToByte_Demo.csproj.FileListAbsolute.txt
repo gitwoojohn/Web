@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\x64\Debug\WriteToByte_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\x64\Debug\WriteToByte_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\bin\x64\Debug\WriteToByte_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\x64\Debug\WriteToByte_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\x64\Debug\WriteToByte_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteToByte_Demo\obj\x64\Debug\WriteToByte_Demo.pdb

@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\bin\Debug\FoldersFilesDeepScan.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\bin\Debug\FoldersFilesDeepScan.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\bin\Debug\FoldersFilesDeepScan.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\obj\Debug\FoldersFilesDeepScan.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\obj\Debug\FoldersFilesDeepScan.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\FoldersFilesDeepScan\obj\Debug\FoldersFilesDeepScan.csprojResolveAssemblyReference.cache

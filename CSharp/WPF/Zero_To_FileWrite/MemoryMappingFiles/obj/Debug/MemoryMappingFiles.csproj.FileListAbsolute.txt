@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\bin\Debug\MemoryMappingFiles.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\bin\Debug\MemoryMappingFiles.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\bin\Debug\MemoryMappingFiles.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\obj\Debug\MemoryMappingFiles.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\obj\Debug\MemoryMappingFiles.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\MemoryMappingFiles\obj\Debug\MemoryMappingFiles.pdb

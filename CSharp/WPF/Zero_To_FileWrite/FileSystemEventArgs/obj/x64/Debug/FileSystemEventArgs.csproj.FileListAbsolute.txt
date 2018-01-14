@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\bin\x64\Debug\FileSystemEventArgs.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\bin\x64\Debug\FileSystemEventArgs.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\bin\x64\Debug\FileSystemEventArgs.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\obj\x64\Debug\FileSystemEventArgs.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\obj\x64\Debug\FileSystemEventArgs.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemEventArgs\obj\x64\Debug\FileSystemEventArgs.pdb

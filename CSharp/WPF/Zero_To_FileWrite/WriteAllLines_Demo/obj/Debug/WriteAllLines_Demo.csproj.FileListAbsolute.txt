@@ -1,0 +1,11 @@
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.exe.config
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.pdb
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteAllLines_Demo\obj\Debug\WriteAllLines_Demo.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\WriteAllLines_Demo\obj\Debug\WriteAllLines_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\Debug\WriteAllLines_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\Debug\WriteAllLines_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\Debug\WriteAllLines_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\Debug\WriteAllLines_Demo.pdb

@@ -1,0 +1,5 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\x64\Debug\CurrentCulture_Change.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\x64\Debug\CurrentCulture_Change.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\x64\Debug\CurrentCulture_Change.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\obj\x64\Debug\CurrentCulture_Change.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\obj\x64\Debug\CurrentCulture_Change.pdb

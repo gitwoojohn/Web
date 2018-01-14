@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\x64\Debug\WriteAllLines_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\x64\Debug\WriteAllLines_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\bin\x64\Debug\WriteAllLines_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\x64\Debug\WriteAllLines_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\x64\Debug\WriteAllLines_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WriteAllLines_Demo\obj\x64\Debug\WriteAllLines_Demo.pdb

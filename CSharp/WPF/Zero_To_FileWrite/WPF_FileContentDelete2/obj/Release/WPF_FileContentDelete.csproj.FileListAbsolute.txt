@@ -1,0 +1,15 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\bin\Release\WPF_FileContentDelete.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\bin\Release\WPF_FileContentDelete.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\bin\Release\WPF_FileContentDelete.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\MainWindow.g.cs
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\App.g.cs
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete_MarkupCompile.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete_MarkupCompile.lref
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\MainWindow.baml
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.g.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.Properties.Resources.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.csproj.GenerateResource.Cache
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\WPF_FileContentDelete\obj\Release\WPF_FileContentDelete.csprojResolveAssemblyReference.cache

@@ -1,0 +1,11 @@
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.exe.config
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.pdb
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\Zero_To_FileWrite\obj\Debug\Zero_To_FileWrite.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\Zero_To_FileWrite\obj\Debug\Zero_To_FileWrite.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\Zero_To_FileWrite.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\Debug\Zero_To_FileWrite.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\Debug\Zero_To_FileWrite.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\Debug\FileBinaryZero.exe.config

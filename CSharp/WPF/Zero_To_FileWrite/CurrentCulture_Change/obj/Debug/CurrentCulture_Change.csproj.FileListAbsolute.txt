@@ -1,0 +1,11 @@
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.exe.config
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.pdb
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\CurrentCulture_Change\obj\Debug\CurrentCulture_Change.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\CurrentCulture_Change\obj\Debug\CurrentCulture_Change.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\bin\Debug\CurrentCulture_Change.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\obj\Debug\CurrentCulture_Change.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\obj\Debug\CurrentCulture_Change.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\CurrentCulture_Change\obj\Debug\CurrentCulture_Change.pdb

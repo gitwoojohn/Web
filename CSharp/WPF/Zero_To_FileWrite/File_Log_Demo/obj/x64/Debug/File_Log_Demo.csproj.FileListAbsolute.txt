@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\x64\Debug\File_Log_Demo.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\x64\Debug\File_Log_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\bin\x64\Debug\File_Log_Demo.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\x64\Debug\File_Log_Demo.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\x64\Debug\File_Log_Demo.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\File_Log_Demo\obj\x64\Debug\File_Log_Demo.pdb

@@ -1,0 +1,9 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\bin\Release\FileContentDelete.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\bin\Release\FileContentDelete.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\bin\Release\FileContentDelete.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.Form1.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.Properties.Resources.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.csproj.GenerateResource.Cache
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileContentDelete\obj\Release\FileContentDelete.pdb

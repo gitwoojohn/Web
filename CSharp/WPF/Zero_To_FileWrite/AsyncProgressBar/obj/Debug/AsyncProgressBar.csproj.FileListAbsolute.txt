@@ -1,0 +1,8 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\bin\Debug\AsyncProgressBar.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\bin\Debug\AsyncProgressBar.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\bin\Debug\AsyncProgressBar.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\obj\Debug\AsyncProgressBar.Form1.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\obj\Debug\AsyncProgressBar.Properties.Resources.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\obj\Debug\AsyncProgressBar.csproj.GenerateResource.Cache
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\obj\Debug\AsyncProgressBar.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\AsyncProgressBar\obj\Debug\AsyncProgressBar.pdb

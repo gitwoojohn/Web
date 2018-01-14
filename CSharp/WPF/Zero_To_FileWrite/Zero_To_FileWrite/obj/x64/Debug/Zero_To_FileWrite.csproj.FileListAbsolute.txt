@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\x64\Debug\FileBinaryZero.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\x64\Debug\FileBinaryZero.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\bin\x64\Debug\FileBinaryZero.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\x64\Debug\Zero_To_FileWrite.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\x64\Debug\FileBinaryZero.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\Zero_To_FileWrite\obj\x64\Debug\FileBinaryZero.pdb

@@ -1,0 +1,6 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\x64\Debug\StringSubString.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\x64\Debug\StringSubString.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\x64\Debug\StringSubString.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\x64\Debug\StringSubString.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\x64\Debug\StringSubString.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\x64\Debug\StringSubString.pdb

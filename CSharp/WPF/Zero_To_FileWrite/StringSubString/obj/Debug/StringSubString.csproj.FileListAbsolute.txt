@@ -1,0 +1,12 @@
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.exe.config
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.pdb
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.exe
+c:\users\sapphire\documents\visual studio 2015\Projects\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.pdb
+C:\Users\Sapphire\Documents\Visual Studio 2015\Projects\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\bin\Debug\StringSubString.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\StringSubString\obj\Debug\StringSubString.pdb

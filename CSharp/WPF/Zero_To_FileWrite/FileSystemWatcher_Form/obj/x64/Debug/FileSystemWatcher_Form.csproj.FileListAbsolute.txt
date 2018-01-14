@@ -1,0 +1,9 @@
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\bin\x64\Debug\FileSystemWatcher_Form.exe.config
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\bin\x64\Debug\FileSystemWatcher_Form.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\bin\x64\Debug\FileSystemWatcher_Form.pdb
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.csprojResolveAssemblyReference.cache
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.Form1.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.Properties.Resources.resources
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.csproj.GenerateResource.Cache
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.exe
+D:\ba\VS2015Project\Zero_To_FileWrite\FileSystemWatcher_Form\obj\x64\Debug\FileSystemWatcher_Form.pdb
