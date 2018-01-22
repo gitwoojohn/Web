@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabHome">
+        <group id="AlwaysOnTop" label="Always On Top">
+          <button id="button1" onAction="ButtonOn" imageMso="PictureBrightnessGallery" label="On" size="large" />
+          <separator id="separator1" />
+          <button id="button2" onAction="ButtonOff" imageMso="Risks" label="Off" size="large" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+

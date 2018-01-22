@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTOAlwaysOnTop", "VSTOAlwaysOnTop\VSTOAlwaysOnTop.csproj", "{1BB11078-F020-4CD8-8A0A-4F16D1796AE1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VSTOAlwaysOnTopAddIn", "VSTOAlwaysOnTopAddIn\VSTOAlwaysOnTopAddIn.vdproj", "{A6FBA152-1451-4D10-A3E5-EE7FAFA49ACC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BB11078-F020-4CD8-8A0A-4F16D1796AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB11078-F020-4CD8-8A0A-4F16D1796AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB11078-F020-4CD8-8A0A-4F16D1796AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB11078-F020-4CD8-8A0A-4F16D1796AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6FBA152-1451-4D10-A3E5-EE7FAFA49ACC}.Debug|Any CPU.ActiveCfg = Debug
+		{A6FBA152-1451-4D10-A3E5-EE7FAFA49ACC}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {860940A8-4603-4A13-835E-63C1EDA609DD}
+	EndGlobalSection
+EndGlobal
