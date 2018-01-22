@@ -1,0 +1,20 @@
+﻿/* 페이지별 스타일 지정 */
+
+#content-main {
+    bottom: 50px; /* #content-footer의 높이와 같은 값 */
+}
+
+#content-main button {
+    margin-top: 10px;
+    width: 200px;
+}
+
+#content-footer {
+    background-color: #cecece;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 고정 바닥글 높이 */
+    overflow: hidden; /* 바닥글에 대해 스크롤 막대를 사용하지 않도록 설정 */
+}

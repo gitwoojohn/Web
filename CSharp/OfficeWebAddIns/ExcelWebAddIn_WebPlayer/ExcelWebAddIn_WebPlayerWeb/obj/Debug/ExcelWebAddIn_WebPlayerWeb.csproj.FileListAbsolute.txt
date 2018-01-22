@@ -1,0 +1,9 @@
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\bin\ExcelWebAddIn_WebPlayerWeb.dll.config
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\bin\ExcelWebAddIn_WebPlayerWeb.dll
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\bin\ExcelWebAddIn_WebPlayerWeb.pdb
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\obj\Debug\ExcelWebAddIn_WebPlayerWeb.csproj.CoreCompileInputs.cache
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\obj\Debug\ExcelWebAddIn_WebPlayerWeb.dll
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\obj\Debug\ExcelWebAddIn_WebPlayerWeb.pdb
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayerWeb\obj\Debug\ExcelWebAddIn_WebPlayerWeb.csprojResolveAssemblyReference.cache

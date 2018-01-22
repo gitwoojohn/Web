@@ -1,0 +1,39 @@
+
+빌드 - 솔루션 배포 - 배포 파일이 만들어짐 ( App.Publish )
+
+ExcelWebAddIn1.Web.SetParameters.xml
+<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/ExcelWebAddIn1Web_deploy" />
+</parameters>
+value에 원하는 폴더 이름으로 변경해서 배포.
+
+wwwRoot에 원하는 폴더 이름을 미리 만들고 공유후에 
+/Y 옵션으로 해야 에러 발생하지 않음( DeafultAppPool, IIUSR )
+
+
+\ExcelWebAddIn1\ExcelWebAddIn1\bin\Debug\app.publish
+
+1. ExcelWebAddIn1.Web.deploy.cmd 파일 생성
+
+2. 관리자 권한으로 명령프롬프트 실행( 아래 명령 실행 )
+   ExcelWebAddIn1.Web.deploy.cmd /Y ( /T : /Y 옵션을 쓰기전에 /T 옵션으로 테스트)
+
+3. IIS에 자동 배포(Inetpub\wwwroot\솔루션이름)
+
+4. IIS에서 "배포 솔루션이름 디렉터리"를 가상 디렉터리로 생성
+   별칭은 원하는 애드인 이름으로 디렉터리는 찾아서 선택
+
+5. 솔루션이름.xml 파일을 "네트워크 공유 폴더"로 복사(엑셀에 등록하기 위한 필요한 이름으로 변경)
+
+6. 솔루션이름.xml 파일의 SourceLocation과 ~remoteURL의 URL을 IIS의 주소로 변경
+   ex. http://localhost/WebAddins/Home.html  or http://등록웹주소/Home.html
+
+7. 엑셀 - 파일 탭 - 옵션 - 보안 센터 - 보안 센터 설정 - 신뢰할 수 있는 추가 기능 카탈로그
+   카탈로그 URL에 "네트워크 공유 폴더 위치"를 넣고 - 카탈로그 추가 - 메뉴에 표시 체크  - 확인
+
+8. 개발 도구 - 추가기능 - 공유 폴더 - 애드인 선택 - 확인
+
+
+추가 설명:
+각 네트워크 폴더를 만들어서 애드인을 하나씩 표시 할 수도 있고 하나의 공유폴더에 다수의 애드인을 표시 할 수도 있음.

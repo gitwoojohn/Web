@@ -1,0 +1,7 @@
+False
+e7533500-3594-4c91-8ef0-eb8d91eef692b0d209e6-0258-4d56-bcd9-a65159078b8e
+{6d7a0cce-0091-4707-b22f-3dcc91fd548d}{ccb64b37-45ee-4dca-a714-95e2bfd1aad1}
+{25cd6a6a-2334-439c-b137-519039a6a6bf}
+1.0.0.0
+ExcelWebAddIn_WebPlayer
+_layouts/15/

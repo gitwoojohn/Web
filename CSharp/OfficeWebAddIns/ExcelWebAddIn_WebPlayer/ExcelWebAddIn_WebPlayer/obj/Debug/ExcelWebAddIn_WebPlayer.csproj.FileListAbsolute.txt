@@ -1,0 +1,2 @@
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayer\obj\Debug\ExcelWebAddIn_WebPlayer.csproj.CoreCompileInputs.cache
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\ExcelWebAddIn_WebPlayer\ExcelWebAddIn_WebPlayer\obj\Debug\ExcelWebAddIn_WebPlayer.csprojResolveAssemblyReference.cache

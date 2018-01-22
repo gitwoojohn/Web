@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+    <script src="../Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- Office.js에 대한 로컬 참조를 사용하여 오프라인 디버깅을 사용하도록 설정하려면 다음을 사용합니다. -->
+    <!-- <script src="../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+    <script src="../Visualization.js" type="text/javascript"></script>
+
+    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <script src="Home.js" type="text/javascript"></script>      
+
+    <!-- Office UI Fabric에 대한 자세한 내용을 보려면 https://aka.ms/office-ui-fabric으로 이동하세요. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+
+    <!-- Office UI Fabric을 오프라인으로 사용할 수 있게 하려면 다음을 사용하세요. -->
+    <!-- link rel="stylesheet" href="../Content/fabric.min.css" -->
+    <!-- link rel="stylesheet" href="../Content/fabric.components.min.css" -->
+
+</head>
+<body>
+    <div id="content-main">
+        <!--<div class="padding">
+    <a id="settings-button" href="../DataBinding/DataBinding.html"><i class="ms-Icon ms-Icon--gear"></i></a>
+    <br /><br />
+    <p class="ms-font-m-plus"><span class="ms-fontWeight-semibold">여기에 시각화 내용을 추가하세요.</span> 예:</p>
+
+    <div id="data-display">-->
+        <!-- 이 div는 문서에서 로드된 데이터로 대체됩니다. -->
+        <!--로드 중...-->
+        <!-- </div> -->
+        <!-- <div class="ms-font-m"><a target="_blank" class="ms-Link ms-Link--hero" href="https://go.microsoft.com/fwlink/?LinkId=276813">온라인으로 더 많은 샘플 찾기...</a></div> -->
+
+        <div id="PlayerName"><h2>Excel Embed Youtube Web Player</h2></div>
+        <div class="padding">
+            <form action="../Player/Youtube.html">
+                <p>유튜브 영상 주소</p>
+                <input class="target" type="text" name="sURL"  /><br />
+
+                <p>자동 시작 ( 0 - 자동재생 X , 1 - 자동 재생 )</p>
+                <input id="option" type="text" name="autoplay" value="1" /><br />
+
+                <p>시작 시간 ( 초 단위 입력 )</p>
+                <input id="option" type="text" name="start" value="0" />
+
+                <p>종료 시간 ( 초 단위 입력 )</p>
+                <input id="option" type="text" name="end" value="0" /><br />
+
+                <!-- disabled일때는 파라메터 값이 넘어가지 않고 readonly일때만 넘어감 -->
+                <!-- readonly or disabled 일때는 직접 값 변경 불가( 자바스크립트를 이용해서 변경 ) -->
+                <p>영상 키값 ( 자동 입력됨 : 입력 불필요 )</p>
+                <input id="option" type="text" name="videoid" disabled /><br />
+
+                <input type="submit" id="play" value="유튜브 재생" />
+            </form>
+        </div>        
+    </div>    
+</body>
+</html>
