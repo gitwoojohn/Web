@@ -1,11 +1,7 @@
-﻿using xlApp = Microsoft.Office.Interop.Excel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using xlApp = Microsoft.Office.Interop.Excel;
 
 namespace VSTOAlwaysOnTop
 {
@@ -45,7 +41,7 @@ namespace VSTOAlwaysOnTop
             SetWindowPos(hwnd, xStype, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
         }
 
-        internal xlApp.Application GetExcelObject()
+        public xlApp.Application GetExcelObject()
         {
             try
             {

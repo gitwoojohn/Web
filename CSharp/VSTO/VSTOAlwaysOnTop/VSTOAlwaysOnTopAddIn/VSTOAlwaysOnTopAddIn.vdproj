@@ -87,6 +87,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CCDF5ACEAD11490EAA7702A9ED41F49C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_EF301EA28ADBF8D34EA582FDA4A4A3FC"
         "OwnerKey" = "8:_45FBEABE8D104DAEB8CAF35C113D1D23"
         "MsmSig" = "8:_UNDEFINED"
@@ -95,12 +101,6 @@
         {
         "MsmKey" = "8:_F60BC9DBB86840539D7FBE738EEA499D"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5C65657C863453CF642A17D2820123E0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -145,6 +145,12 @@
         "OwnerKey" = "8:_5E3D6AC178E9A29222A2B1967BAC3875"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5C65657C863453CF642A17D2820123E0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -163,6 +169,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -179,6 +201,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -414,6 +452,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCDF5ACEAD11490EAA7702A9ED41F49C"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\Ampeross-Qetto-Icon-developer.ico"
+            "TargetName" = "8:Ampeross-Qetto-Icon-developer.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_8B1733C20B93404895C1A4656AF0AAB7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EF301EA28ADBF8D34EA582FDA4A4A3FC"
             {
             "AssemblyRegister" = "3:1"
@@ -480,17 +538,6 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B6D8E3330EBC4CF0A0A448FD8450D0E8"
-                    {
-                    "Name" = "8:VSTOAlwaysOnTopAddIn"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_DC5025C443444F8593042863BACC5ECF"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_8B1733C20B93404895C1A4656AF0AAB7"
@@ -533,15 +580,15 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VSTOAlwaysOnTopAddIn"
         "ProductCode" = "8:{B4E911D1-B954-4F9F-A4D0-DD283CE685B7}"
-        "PackageCode" = "8:{167A2ADD-A703-47B8-9424-71355199157A}"
+        "PackageCode" = "8:{B8680B9A-275D-40B0-B9EE-CBAD9F30B4DB}"
         "UpgradeCode" = "8:{E594383B-F0BD-4C38-A0EF-3EF7F519271B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Step by Step"
+        "Manufacturer" = "8:StepByStep"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:VSTOAlwaysOnTopAddIn"
@@ -550,7 +597,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Excel Window Always On Top On, Off Addin"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_CCDF5ACEAD11490EAA7702A9ED41F49C"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -565,7 +612,7 @@
             {
                 "Keys"
                 {
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4314451A2F1048D3AA64AF62FFCFF5B4"
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_30790AC25D6248E5ABABD7C70253601E"
                     {
                     "Name" = "8:Software"
                     "Condition" = "8:"
@@ -615,7 +662,7 @@
                                                             "Name" = "8:VSTOAlwaysOnTopAddIn"
                                                             "Condition" = "8:"
                                                             "AlwaysCreate" = "11:FALSE"
-                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:TRUE"
                                                             "Transitive" = "11:FALSE"
                                                                 "Keys"
                                                                 {
@@ -628,7 +675,15 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:VSTOAlwaysOnTopName"
+                                                                    "Value" = "8:VSTOAlwaysOnTop"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_3DEE9E8D26F6491791A59388B0F608E9"
+                                                                    {
+                                                                    "Name" = "8:Description"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:윈도우를 항상 위 ( On / Off 하는 VSTO 애드인 )"
                                                                     }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_4FEFD2BFA5BA4205AE078C0D14C6BE7A"
                                                                     {
@@ -636,7 +691,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:file:///C:\\Program Files (x86)\\Step by Step\\VSTOAlwaysOnTopAddIn\\VSTOAlwaysOnTop.vsto|vstolocal"
+                                                                    "Value" = "8:file:///[ProgramFilesFolder][Manufacturer]\\[ProductName]\\VSTOAlwaysOnTop.vsto|vstolocal"
                                                                     }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_C5FC27E9570A422882560CEF2484757D"
                                                                     {
@@ -644,7 +699,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:3"
-                                                                    "Value" = "3:3"
+                                                                    "Value" = "3:2"
                                                                     }
                                                                 }
                                                             }
@@ -679,34 +734,6 @@
             {
                 "Keys"
                 {
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E42851ECB7084849B97079D6BB16E493"
-                    {
-                    "Name" = "8:Software"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_57E1FE03167E462198B86F0E1E40861B"
-                            {
-                            "Name" = "8:[Manufacturer]"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
                 }
             }
             "HKCR"
@@ -733,34 +760,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1C711D265FA647E8B111FED93F71732C"
-            {
-            "Name" = "8:VSTOAlwaysOnTop (Active)"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_45FBEABE8D104DAEB8CAF35C113D1D23"
-            "Folder" = "8:_B6D8E3330EBC4CF0A0A448FD8450D0E8"
-            "WorkingFolder" = "8:_8B1733C20B93404895C1A4656AF0AAB7"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8E9F7410612248858AD4EDD8EEAE242C"
-            {
-            "Name" = "8:VSTOAlwaysOnTop (Active)"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_45FBEABE8D104DAEB8CAF35C113D1D23"
-            "Folder" = "8:_8F6FB7881DB54739B97860E914E840C4"
-            "WorkingFolder" = "8:_8B1733C20B93404895C1A4656AF0AAB7"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {

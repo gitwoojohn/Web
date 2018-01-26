@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
 
 // TODO:  리본(XML) 항목을 설정하려면 다음 단계를 수행하십시오.
@@ -25,7 +21,6 @@ using Office = Microsoft.Office.Core;
 // 3. 리본 XML 파일의 컨트롤 태그에 특성을 할당하여 사용자 코드의 적절한 콜백 메서드를 식별합니다.  
 
 // 자세한 내용은 Visual Studio Tools for Office 도움말에서 리본 XML 설명서를 참조하십시오.
-
 
 namespace VSTOAlwaysOnTop
 {
@@ -56,7 +51,6 @@ namespace VSTOAlwaysOnTop
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
             this.ribbon = ribbonUI;
-            
         }
 
         public void ButtonOn(Office.IRibbonControl control)
@@ -70,7 +64,7 @@ namespace VSTOAlwaysOnTop
 
         #endregion
 
-        #region 도우미
+        #region 비주얼 스튜디오가 자동으로 만든 코드
 
         private static string GetResourceText(string resourceName)
         {

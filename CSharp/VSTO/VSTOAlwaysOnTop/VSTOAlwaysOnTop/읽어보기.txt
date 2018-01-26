@@ -1,0 +1,49 @@
+﻿### VSTO 실행파일로 배포하기 ###
+
+# 실제 파일 추가하기
+1.VSTO를 사용해서 각 오피스 애드인을 만든다.
+
+2.프로젝트 추가 - 기타 프로젝트 형식 - Visual Studio Installer - 실행파일 이름 설정
+
+3.배포 실행파일 프로젝트가 만들어 지면 - 프로젝트명 오른쪽 마우스 클릭 - View - 파일 시스템 클릭
+
+4.Application Folder에서 마우스 오른쪽 클릭 - Add 
+  - 프로젝트 출력 선택 - 기본 출력 선택 - 확인 클릭
+
+5.다시 Application Folder에서 마우스 오른쪽 클릭 - Add - 파일 선택 
+  - 확장자가 .manifest와 .vsto 파일 2개를 추가 해준다.
+
+6. 설치 프로젝트 클릭 - 속성에서 아래 항목 수정
+Author	      - 만든 사람 
+Description   - 프로그램 설명
+Manufacturer  - 회사명
+ProductName	  - 애드인 이름 
+
+엑셀 x32 버전
+file:///C:\Program Files (x86)\Manufacturer\ProductName\ 폴더에 배포 파일 설치.
+
+엑셀 x64 버전
+file:///C:\Program Files\Manufacturer\ProductName\ 폴더에 배포 파일 설치.
+
+------------------------------------------------------------------------
+
+# 레지스트리 설정하기
+1.배포 실행파일 프로젝트명 오른쪽 마우스 클릭 - View - 레지스트리 클릭
+
+2.HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Excel\Addins\애드인_이름설정 
+  HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\애드인_이름설정
+
+3. 애드인 이름에서 - 문자열 2개, DWORD 값 추가
+
+문자열 설정(x32, x64 엑셀 버전에 따라 ProgramFiles or (x86)변경 )
+vstolocal의 의미 : ClickOnce 캐시에서 VSTO의 정보를 가져오지 않고 
+				   해당 경로에서 VSTO 정보 가져오기
+------------------------------------------------------------------
+Name            Value
+FriendlyName    엑셀에 추가기능에 나타낼 이름(영문 추천)
+Manifest        file:///C:\Program Files (x86)\Manufacturer\ProductName\VSTOAlwaysOnTop.vsto|vstolocal
+
+DWORD 설정   
+------------
+Name            Value
+LoadBehavior    2		2 : 애드인 표시는 하지만 자동 로드 X, 3 : 애드인 표시와 자동 로드
