@@ -14,7 +14,7 @@ namespace VSTOAlwaysOnTop
         // 커스텀 XML 리본 메뉴 노출
         protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
-            return new Ribbon1();
+            return new RibbonX();
         }
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {

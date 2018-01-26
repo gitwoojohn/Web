@@ -177,7 +177,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Ribbon1.cs" />
+    <Compile Include="RibbonX.cs" />
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -191,7 +191,7 @@
     <None Include="VSTOAlwaysOnTop_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Ribbon1.xml">
+    <EmbeddedResource Include="RibbonX.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

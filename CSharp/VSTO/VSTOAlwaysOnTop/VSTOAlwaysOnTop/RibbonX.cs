@@ -25,13 +25,13 @@ using Office = Microsoft.Office.Core;
 namespace VSTOAlwaysOnTop
 {
     [ComVisible(true)]
-    public class Ribbon1 : Office.IRibbonExtensibility
+    public class RibbonX : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI ribbon;
 
         static Win32API win32API;
 
-        public Ribbon1()
+        public RibbonX()
         {
             win32API = new Win32API();
         }
@@ -40,7 +40,7 @@ namespace VSTOAlwaysOnTop
 
         public string GetCustomUI(string ribbonID)
         {
-            return GetResourceText("VSTOAlwaysOnTop.Ribbon1.xml");
+            return GetResourceText("VSTOAlwaysOnTop.RibbonX.xml");
         }
 
         #endregion

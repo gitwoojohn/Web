@@ -454,7 +454,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCDF5ACEAD11490EAA7702A9ED41F49C"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\Ampeross-Qetto-Icon-developer.ico"
+            "SourcePath" = "8:D:\\Downloads\\Ampeross-Qetto-Icon-developer.ico"
             "TargetName" = "8:Ampeross-Qetto-Icon-developer.ico"
             "Tag" = "8:"
             "Folder" = "8:_8B1733C20B93404895C1A4656AF0AAB7"
@@ -691,7 +691,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:file:///[ProgramFilesFolder][Manufacturer]\\[ProductName]\\VSTOAlwaysOnTop.vsto|vstolocal"
+                                                                    "Value" = "8:[TARGETDIR]VSTOAlwaysOnTop.vsto|vstolocal"
                                                                     }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_C5FC27E9570A422882560CEF2484757D"
                                                                     {
