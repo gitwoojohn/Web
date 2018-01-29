@@ -1,0 +1,42 @@
+﻿************************************************************************
+
+인스톨 프로젝트는 항상 관리자 권한으로 실행해서 사용
+  * .Net DLl COM 개체를 레지스트리 등록이나 파일 추출시 - TLB 생성 때문 
+
+************************************************************************
+
+Registry Capture 에러가 생길때  RegCap.exe의 
+호환성 모드를 Windows XP 서비스 팩 3, 관리자 권한으로 실행 체크 후 빌드
+
+1. VSTO 배포시 확장작 .vsto, manifest 2개 파일 인스톨 프로젝트에 추가
+
+2. 인스톨 프로젝트 레지스트리에 경로 추가( 필수 문자 키 2개, DWORD 1개 )
+	* HKCR-Addins 로그인 유저만 사용
+	* HKLM-Addins 컴퓨터 모든 유저 사용
+
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\ComServiceOleMarshal]
+"Manifest"="[TARGETDIR]/ComServiceOleMarshal.vsto|vstolocal"
+"LoadBehavior"=dword:00000003
+"FriendlyName"="ComServiceOleMarshal"
+"Description"="VSTO COM Addin"
+
+
+
+** 아래는 참고 사항
+
+Install Project시 타입 라이브러리를 등록시 ( vsdrfCOM )
+
+COM 개체는 .NET이전에 나온 기술이기 때문에 이후의 변화에 따른 레지스트리 경로 확장을 못함. 
+COM 개체는 아래와 같이 레지스트리에 4개의 항목을 등록.( x32, x64 )
+
+x64
+----
+HKEY_CLASSES_ROOT\TypeLib
+HKEY_CLASSES_ROOT\CLSID\메인클래스GUID
+
+x32
+----
+HKEY_CLASSES_ROOT\Wow6432Node\TypeLib
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\메인클래스GUID

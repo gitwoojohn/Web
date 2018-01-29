@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComServiceOleMarshal", "ComServiceOleMarshal\ComServiceOleMarshal.csproj", "{6009EFA0-2E0E-49AE-81AF-40EAAA995903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTest", "WpfTest\WpfTest.csproj", "{98A60C46-2101-44C0-9B85-92A722F5CBFD}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WpfComOle.App", "WpfComOle.App\WpfComOle.App.vdproj", "{92E36166-9D7F-4FF1-B132-D42A0D435AEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6009EFA0-2E0E-49AE-81AF-40EAAA995903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6009EFA0-2E0E-49AE-81AF-40EAAA995903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6009EFA0-2E0E-49AE-81AF-40EAAA995903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6009EFA0-2E0E-49AE-81AF-40EAAA995903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A60C46-2101-44C0-9B85-92A722F5CBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A60C46-2101-44C0-9B85-92A722F5CBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A60C46-2101-44C0-9B85-92A722F5CBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A60C46-2101-44C0-9B85-92A722F5CBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E36166-9D7F-4FF1-B132-D42A0D435AEB}.Debug|Any CPU.ActiveCfg = Debug
+		{92E36166-9D7F-4FF1-B132-D42A0D435AEB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30E3113B-FBE4-4705-88F9-AA8D1B52FB45}
+	EndGlobalSection
+EndGlobal
