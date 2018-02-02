@@ -26,6 +26,8 @@ namespace WPF_FileContentDelete
         private GridViewColumnHeader listViewSortCol = null;
         private SortAdorner listViewSortAdorner = null;
 
+        static bool _fileContents = false;
+
         public MainWindow()
         {
             // 실행 성능 향상.
@@ -41,16 +43,17 @@ namespace WPF_FileContentDelete
 
         private void InitializeOpenFileDialog()
         {
-            openFileDialog = new OpenFileDialog();
+            openFileDialog = new OpenFileDialog
+            {
+                // 여러 파일 선택하기
+                Multiselect = true,
 
-            // 여러 파일 선택하기
-            openFileDialog.Multiselect = true;
-
-            // Set the file dialog to filter for All files.
-            openFileDialog.Filter = "All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = @"G:\Baidu";
-            openFileDialog.Title = "파일 선택";
-            openFileDialog.FileName = string.Empty;
+                // Set the file dialog to filter for All files.
+                Filter = "All files (*.*)|*.*",
+                InitialDirectory = @"G:\Baidu",
+                Title = "파일 선택",
+                FileName = string.Empty
+            };
 
             button_Delete.IsEnabled = false;
         }
@@ -68,13 +71,12 @@ namespace WPF_FileContentDelete
             button_ZeroFill.IsEnabled = false;
 
             progressBar.Value = 0;
-            var progressIndicator = new Progress<int>( ReportProgress );
-            await DeleteFileAsync( listView.Items.Count, progressIndicator );
+            await DeleteFileAsync(listView.Items.Count, new Progress<int>(ReportProgress));
 
             button_Delete.IsEnabled = true;
         }
 
-        private void button_Delete_Click( object sender, RoutedEventArgs e )
+        private void Button_Delete_Click( object sender, RoutedEventArgs e )
         {
             string NewFileName;
             string OldFileName;
@@ -100,7 +102,7 @@ namespace WPF_FileContentDelete
             button_Delete.IsEnabled = false;
         }
 
-        private async Task DeleteFileAsync( int totalCount, IProgress<int> progress )
+        private async ValueTask<bool> DeleteFileAsync( int totalCount, IProgress<int> progress )
         {
             int tempCount = 1;
             try
@@ -125,6 +127,8 @@ namespace WPF_FileContentDelete
                 MessageBox.Show( e.Message );
                 Debug.WriteLine( e.Message );
             }
+
+            return _fileContents = true;
 
             //int tempCount = 1;
             //const int blockSize = 1024 * 64; // 8; // 16; 
@@ -187,7 +191,7 @@ namespace WPF_FileContentDelete
         //    return false;
         //}
 
-        private async Task StreamFileWrite( string filePath )
+        private async ValueTask<bool> StreamFileWrite( string filePath )
         {
             const int blockSize = 1024 * 64; // 8; // 16; 
             byte[] data = new byte[ blockSize ];
@@ -242,12 +246,14 @@ namespace WPF_FileContentDelete
                     MessageBox.Show( e.ToString() );
                 }
             }
+
+            return _fileContents = true;
         }
 
         // 일반적으로 재귀 방식을 쓰지만 복잡하거나 중첩 규모가 크면 스택 오버 플로우 발생 가능성
         private void TraverseTree( string[] SourceDirs )
         {
-            Stack<string> dirs = new Stack<string>( 30 );
+            Stack<string> dirs = new Stack<string>();
 
             // 스택에 소스 경로 넣기( Push )
             foreach( var SourceDir in SourceDirs )
