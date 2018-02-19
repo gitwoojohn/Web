@@ -9,3 +9,13 @@ C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\VSTOAlwaysOnTop\VSTOAlwa
 C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.dll
 C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.pdb
 C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.csprojResolveAssemblyReference.cache
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\bin\Release\VSTOAlwaysOnTop.dll
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\bin\Release\VSTOAlwaysOnTop.pdb
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\bin\Release\VSTOAlwaysOnTop.dll.manifest
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\bin\Release\VSTOAlwaysOnTop.vsto
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.Properties.Resources.resources
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.csproj.GenerateResource.Cache
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.csproj.CoreCompileInputs.cache
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.dll
+D:\GitHub\CSharp\VSTO\VSTOAlwaysOnTop\VSTOAlwaysOnTop\obj\Release\VSTOAlwaysOnTop.pdb

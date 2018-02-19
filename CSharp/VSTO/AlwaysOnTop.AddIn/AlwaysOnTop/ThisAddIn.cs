@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
-using Microsoft.Office.Tools.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 
-namespace VSTOAlwaysOnTop
+namespace AlwaysOnTop
 {
-    public partial class ThisAddIn
+    public partial class ThisAddIn 
     {
         // 커스텀 XML 리본 메뉴 노출
         protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
@@ -32,15 +27,14 @@ namespace VSTOAlwaysOnTop
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisAddIn_Startup);
-            this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
+            this.Startup += new EventHandler(ThisAddIn_Startup);
+            this.Shutdown += new EventHandler(ThisAddIn_Shutdown);
         }
 
-        public Excel.Worksheet GetActiveWorkSheet()
-        {
-            return (Excel.Worksheet)Application.ActiveSheet;
-        }
-
+        //public Excel.Worksheet GetActiveWorkSheet()
+        //{
+        //    return (Excel.Worksheet)Application.ActiveSheet;
+        //}
         #endregion
     }
 }
