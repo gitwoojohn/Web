@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{770CA152-60E2-464E-8465-1D57C3547F20}"
+	ProjectSection(SolutionItems) = preProject
+		SharedAddInEvents_OfficeKeys.reg = SharedAddInEvents_OfficeKeys.reg
+		SharedAddInEventsCLSID.reg = SharedAddInEventsCLSID.reg
+		Test_SharedAddInEvents.xlsm = Test_SharedAddInEvents.xlsm
+		읽어보기.txt = 읽어보기.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAddInEvents", "SharedAddInEvents\SharedAddInEvents.csproj", "{05D1AA26-A0BE-4FFF-B143-3935C75BCB9B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Non-VSTO-COMAddIn", "Non-VSTO-COMAddIn\Non-VSTO-COMAddIn.vdproj", "{49E514CA-BF10-46AC-99F0-95CE0D599527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05D1AA26-A0BE-4FFF-B143-3935C75BCB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D1AA26-A0BE-4FFF-B143-3935C75BCB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D1AA26-A0BE-4FFF-B143-3935C75BCB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D1AA26-A0BE-4FFF-B143-3935C75BCB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E514CA-BF10-46AC-99F0-95CE0D599527}.Debug|Any CPU.ActiveCfg = Debug
+		{49E514CA-BF10-46AC-99F0-95CE0D599527}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDD260A6-F762-4DD2-9BEB-193A15E23606}
+	EndGlobalSection
+EndGlobal
