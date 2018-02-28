@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+   <?define WixTestExcel2_TargetDir=$(var.WixTestExcel2.TargetDir)?>
+   <!-- Language = 1042 한글설정, Codepage = 1252 영문설정 -->
+   <!-- WixTestExcel2.Setup - 속성에서 Build - Cultures to build - ko-KR -->
+   <Product Id="F85E8B68-E212-402C-BECD-5F70B2FD5922"
+           Name="WIX Install Test Add-In"
+           Language="1042" Codepage="1252" Version="1.0.0.0"
+           Manufacturer="Step By Step Study"
+           UpgradeCode="df69f404-caf9-4f52-9da8-6b8910c3e791">
+
+      <!-- Package Guid는 매번 생성될 때마다 자동 생성  -->
+      <Package Id="*"
+             Description="Step By Step Study 1.0 설치 관리자"
+             Comments="WixTestExcel2는 Step By Step Study의 등록된 상표입니다."
+             Manufacturer="Step by Step Study"
+             InstallerVersion="301"
+             Languages="1042"
+             SummaryCodepage="1252"
+             Compressed="yes"
+             InstallScope="perMachine" />
+
+      <Icon Id="AppIcon.ico" SourceFile="$(var.ProjectDir)if_document_edit_48757.ico" />
+      <Property Id="ARPPRODUCTICON" Value="AppIcon.ico" />
+
+      <WixVariable Id="WixUIBannerBmp" Value="Images\installer_top-banner.bmp" />
+      <WixVariable Id="WixUIDialogBmp" Value="Images\installer_background.bmp" />
+      <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\license.rtf" />
+      
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+      
+      <!-- 기본 설치 화면 -->
+      <UIRef Id="WixUI_InstallDir" />
+      
+      <!-- 간단한 설치를 하고 싶을때 -->
+      <!-- <UIRef Id="WixUI_Minimal" /> -->
+      
+      <UIRef Id="WixUI_ErrorProgressText" />
+      
+      <MajorUpgrade DowngradeErrorMessage="설치 할려는 프로그램보다 더 최신 버전의 프로그램이 설치 되어있습니다." />
+
+      <!-- EmbedCab="yes" 모든 파일을 .MSI에 합쳐서 설치 파일 생성  -->
+      <MediaTemplate EmbedCab="yes" />
+
+      <!-- 여러 구성요소의 정의 참조( ★★★★★ ) -->
+      <Feature Id="ProductFeature" Title="WixTestExcel2.Setup" Level="1">
+         <ComponentGroupRef Id="ProductComponents" />
+
+         <ComponentRef Id="Registry_FriendlyName" />
+         <ComponentRef Id="Registry_Description" />
+         <ComponentRef Id="Registry_Manifest" />
+         <ComponentRef Id="Registry_LoadBehavior" />
+
+         <!-- Start Menu -->
+         <ComponentRef Id="CMP_MarkDownText" />
+         <ComponentRef Id="CMP_DocumentationShortcut" />
+      </Feature>
+   </Product>
+
+   <Fragment>
+      <Directory Id="TARGETDIR" Name="SourceDir">
+         <Directory Id="ProgramFilesFolder">
+            <!-- ProgramsFiles (x86) 설치 폴더 -->
+            <Directory Id="ComponyName" Name="StepByStep">
+               <Directory Id="INSTALLFOLDER" Name="WixTestExcel2.AddIn" />
+
+               <!-- 시작 메뉴 폴더 만들기( 프로그램, UnInstall 바로가기 ) -->
+               <Directory Id="ProgramMenuFolder">
+                  <Directory Id="SoftwareShortcutsDir" Name="WixTestExcel2 Add-In Software" />
+               </Directory>
+            </Directory>
+         </Directory>
+      </Directory>
+   </Fragment>
+
+   <!-- VSTO를 실행하기 위해서는 VSTO v4.0, .Net v4.0 이상 필요 -->
+   <!-- VSTO v4.0 설치 링크 제공, .Net v4.0 설치 메세지 표시  -->
+   <Fragment>
+      <Property Id="VSTORUNTIMEREDIST">
+         <RegistrySearch
+           Id="VSTORuntimeRedist"
+           Root="HKLM"
+           Key="SOFTWARE\Microsoft\VSTO Runtime Setup\v4R"
+           Name="Version"
+           Type="raw" />
+      </Property>
+      <Condition
+          Message="The Visual Studio 2010 Tools for Office Runtime is not installed. 
+        Please download and install from 
+        http://www.microsoft.com/en-us/download/details.aspx?id=20479.">
+         <![CDATA[Installed OR VSTORUNTIMEREDIST>="10.0.30319"]]>
+      </Condition>
+      <PropertyRef Id="NETFRAMEWORK40FULL"/>
+      <Condition Message="This application requires .NET Framework 4.0.">
+         <![CDATA[Installed OR NETFRAMEWORK40FULL]]>
+      </Condition>
+   </Fragment>
+
+   <!-- Start Menu Shortcuts-->
+   <Fragment>
+      <!-- ReadMe.md 실제 파일 폴더에 설치-->
+      <DirectoryRef Id="INSTALLFOLDER">
+         <Component Id="CMP_MarkDownText" Guid="E8A58B7B-F031-4548-9BDD-7A6796C8460D">
+            <File Id="FILE_MarkDownText" Source="ReadMe.md" KeyPath="yes" />
+         </Component>
+      </DirectoryRef>
+
+      <!-- 시작 메뉴에 폴더 생성과 바로가기, UnInstall 추가 -->
+      <DirectoryRef Id="SoftwareShortcutsDir">
+         <Component Id="CMP_DocumentationShortcut"
+                    Guid="33741C82-30BF-41AF-8246-44A5DCFCF953">
+            <Shortcut Id="DocumentationStartMenuShortcut"
+                      Name="WixTestExcel Add-In Documentation"
+                      Description="ReadMe MarkDown Documentation"
+                      Target="[INSTALLFOLDER]ReadMe.md" />
+            
+            <Shortcut Id="UninstallShortcut"
+                      Name="Uninstall InstallPractice"
+                      Description="Uninstalls WixTestExcel2 Add-In"
+                      Target="[System64Folder]msiexec.exe"
+                      Arguments="/x [ProductCode]" />
+            
+            <RemoveFolder Id="RemoveMyShortcutsDir"
+                          On="uninstall" />
+            <RegistryValue Root="HKCU"
+                           Key="Software\[Manufacturer]\[ProductName]"
+                           Name="installed"
+                           Type="integer"
+                           Value="1"
+                           KeyPath="yes" />
+         </Component>
+      </DirectoryRef>
+   </Fragment>
+
+   <Fragment>
+      <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+         <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+         <!-- <Component Id="ProductComponent"> -->
+         <!-- TODO: Insert files, registry keys, and other resources here. -->
+         <!-- </Component> -->
+
+         <!-- ProgramFilesFolder(x86), ProgramsFiles64Folder(x64) -->
+         <Component Id="WixTestExcel2_vsto_Component">
+            <File Id="WixTestExcel2_vsto" KeyPath="yes"
+                  Name="WixTestExcel2.vsto" Source="$(var.WixTestExcel2.TargetDir)"></File>
+         </Component>
+         <Component Id="WixTestExcel2_dll_manifest_Component">
+            <File Id="WixTestExcel2_dll_manifest" KeyPath="yes"
+                  Name="WixTestExcel2.dll.manifest" Source="$(var.WixTestExcel2.TargetDir)"></File>
+         </Component>
+         <Component Id="MSOfficeToolsCommon_dll_Component">
+            <File Id="MSOfficeToolsCommon_dll" KeyPath="yes"
+                  Name="Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                  Source="$(var.WixTestExcel2.TargetDir)"></File>
+         </Component>
+         <!--
+      <Component Id="MSOfficeToolsExcel_dll_Component">
+        <File Id="MSOfficeToolsExcel_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.Excel.dll"
+              Source="$(var.WixTestExcel2.TargetDir)"></File>
+      </Component>
+      -->
+         <!--
+      <Component Id="WixTestExcel2_tlb_Component">
+        <File Id="WixTestExcel2_tlb" KeyPath="yes"
+              Name="WixTestExcel.tlb"
+              Source="$(var.WixTestExcel2.TargetDir)"></File>
+      </Component>
+      -->
+         <Component Id="WixTestExcel2_dll_Component" >
+            <File Id="WixTestExcel2_dll" KeyPath="yes"
+                  Name="WixTestExcel2.dll" Source="$(var.WixTestExcel2.TargetDir)" />
+         </Component>
+
+         <!-- 레지스트리 설정 FriendlyName, Description, Manifest, LoadBehavior -->
+         <Component Id="Registry_FriendlyName">
+            <RegistryValue Id="RegKey_FriendlyName" Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\WixTestExcel2"
+                           Name="FriendlyName"
+                           Value="WixTestExcel2"
+                           Type="string" KeyPath="yes" />
+         </Component>
+         <Component Id="Registry_Description">
+            <RegistryValue Id="RegKey_Description"
+                           Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\WixTestExcel2"
+                           Name="Description"
+                           Value="WixTestExcel2 Wix Script Add-In"
+                           Type="string" KeyPath="yes" />
+         </Component>
+         <Component Id="Registry_Manifest">
+            <RegistryValue Id="RegKey_Manifest"
+                           Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\WixTestExcel2"
+                           Name="Manifest" Value="[INSTALLFOLDER]WixTestExcel2.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+         </Component>
+         <Component Id="Registry_LoadBehavior">
+            <RegistryValue Id="RegKey_LoadBehavior"
+                           Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\WixTestExcel2"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+         </Component>
+      </ComponentGroup>
+   </Fragment>
+</Wix>

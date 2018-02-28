@@ -1,0 +1,2 @@
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2.Setup\bin\Debug\WixTestExcel2.Setup.msi
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2.Setup\bin\Debug\WixTestExcel2.Setup.wixpdb

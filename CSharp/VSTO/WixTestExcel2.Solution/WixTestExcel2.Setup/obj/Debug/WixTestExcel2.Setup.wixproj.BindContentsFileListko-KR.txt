@@ -1,0 +1,5 @@
+ReadMe.md
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.dll
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.dll.manifest
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.vsto

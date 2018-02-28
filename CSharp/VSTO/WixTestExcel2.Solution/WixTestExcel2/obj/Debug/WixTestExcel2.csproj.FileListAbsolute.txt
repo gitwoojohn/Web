@@ -1,0 +1,11 @@
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.dll
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.pdb
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.dll.manifest
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\WixTestExcel2.vsto
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.Properties.Resources.resources
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.csproj.GenerateResource.Cache
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.csproj.CoreCompileInputs.cache
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.dll
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.pdb
+C:\Users\Sapphire\Documents\Visual Studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2\obj\Debug\WixTestExcel2.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+obj\Debug\Product.wixobj
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2.Setup\bin\Debug\WixTestExcel2.Setup.msi
+c:\users\sapphire\documents\visual studio 2017\Projects\WixTestExcel2.Solution\WixTestExcel2.Setup\bin\Debug\WixTestExcel2.Setup.wixpdb
+obj\Debug\WixTestExcel2.Setup.wixproj.BindContentsFileListko-KR.txt
+obj\Debug\WixTestExcel2.Setup.wixproj.BindOutputsFileListko-KR.txt
+obj\Debug\WixTestExcel2.Setup.wixproj.BindBuiltOutputsFileListko-KR.txt
