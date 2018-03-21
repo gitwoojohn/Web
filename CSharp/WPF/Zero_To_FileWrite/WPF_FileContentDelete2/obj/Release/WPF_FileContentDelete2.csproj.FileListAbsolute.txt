@@ -58,7 +58,6 @@ D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Xml.XPath.XDocument.dll
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Threading.Tasks.Extensions.dll
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Threading.Tasks.Extensions.xml
-D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csprojResolveAssemblyReference.cache
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\MainWindow.g.cs
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\App.g.cs
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete_MarkupCompile.cache
@@ -70,3 +69,5 @@ D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_Fi
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.CoreCompileInputs.cache
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.pdb
+D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.CopyComplete
+D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe.config

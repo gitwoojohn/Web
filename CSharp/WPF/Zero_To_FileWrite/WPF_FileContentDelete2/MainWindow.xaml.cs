@@ -26,7 +26,7 @@ namespace WPF_FileContentDelete
         private GridViewColumnHeader listViewSortCol = null;
         private SortAdorner listViewSortAdorner = null;
 
-        static bool _fileContents = false;
+        //static bool _fileContents = false;
 
         public MainWindow()
         {
@@ -86,7 +86,12 @@ namespace WPF_FileContentDelete
                 NewFileName = Path.GetDirectoryName( listView.Items[ i ].ToString() ) + @"\1.tmp";
                 OldFileName = listView.Items[ i ].ToString();
 
-                // 파일 이름 변경
+                // 생성, 마지막 액세스, 쓰기 현재 시간으로 설정.
+                File.SetCreationTime(OldFileName,DateTime.Now);
+                File.SetLastAccessTime(OldFileName, DateTime.Now);
+                File.SetLastWriteTime(OldFileName, DateTime.Now);
+
+                // 파일 이름 변경, 삭제
                 File.Move( OldFileName, NewFileName );
                 File.Delete( NewFileName );
             }
@@ -115,10 +120,6 @@ namespace WPF_FileContentDelete
                         progress.Report( ( tempCount * 100 / totalCount ) );
                     }
                     await StreamFileWrite( listView.Items[ i ].ToString() );
-                    //if( progress != null )
-                    //{
-                    //    progress.Report( ( tempCount * 100 / totalCount ) );
-                    //}
                     tempCount++;
                 }
             }
@@ -126,9 +127,10 @@ namespace WPF_FileContentDelete
             {
                 MessageBox.Show( e.Message );
                 Debug.WriteLine( e.Message );
+                return false;
             }
 
-            return _fileContents = true;
+            return true;
 
             //int tempCount = 1;
             //const int blockSize = 1024 * 64; // 8; // 16; 
@@ -178,6 +180,7 @@ namespace WPF_FileContentDelete
             //}
         }
 
+        // 관리자 권한 실행중인지 판단
         //public static bool IsAdministrator()
         //{
         //    WindowsIdentity identity = WindowsIdentity.GetCurrent();
@@ -235,6 +238,8 @@ namespace WPF_FileContentDelete
                         await streamWrite.WriteAsync( data, 0, data.Length );
                     }
 
+                    streamWrite.SetLength(0);
+
                     //if( streamWrite.Length > count * blockSize )
                     //{
                     //    byte[] Last_Data = new byte[ streamWrite.Length - ( count * blockSize ) ];
@@ -244,10 +249,10 @@ namespace WPF_FileContentDelete
                 catch( Exception e )
                 {
                     MessageBox.Show( e.ToString() );
+                    return false;
                 }
+                return true;
             }
-
-            return _fileContents = true;
         }
 
         // 일반적으로 재귀 방식을 쓰지만 복잡하거나 중첩 규모가 크면 스택 오버 플로우 발생 가능성
@@ -354,9 +359,9 @@ namespace WPF_FileContentDelete
                     }
                 }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show( e.ToString() );
+                MessageBox.Show( ex.ToString() );
             }            
         }
 
@@ -367,11 +372,18 @@ namespace WPF_FileContentDelete
                 // 리스트뷰 아이템 추가
                 long fileSize = new FileInfo( file ).Length;
 
-                // 파일 속성 변경
-                File.SetAttributes( file, FileAttributes.Normal );
+                try
+                {
+                    // 파일 속성 변경
+                    File.SetAttributes(file, FileAttributes.Normal);
 
-                // 리스트 뷰 데이터 추가
-                listView.Items.Add( new SelectionFileData( file, ( fileSize / 1024 + 1 ) ) );
+                    // 리스트 뷰 데이터 추가
+                    listView.Items.Add(new SelectionFileData(file, (fileSize / 1024 + 1)));
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("파일이 이미 사용 중 이거나 권한이 없습니다.", "파일 속성 변경 에러", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
         }
 
@@ -382,25 +394,30 @@ namespace WPF_FileContentDelete
             TaskbarItemInfo.ProgressValue = ( double )value / 100;
         }
 
-        // 파일 크기별로 정렬
-        private void lvUsersColumnHeader_Click( object sender, RoutedEventArgs e )
+        // 파일 이름, 크기별로 정렬 가능
+        private void ColumnHeader_Click( object sender, RoutedEventArgs e )
         {
+            // 클릭한 헤더 Tag 알아내기
             GridViewColumnHeader column = ( sender as GridViewColumnHeader );
             string sortBy = column.Tag.ToString();
+
+            // 헤더 클릭 이벤트 발생시 
             if( listViewSortCol != null )
             {
                 AdornerLayer.GetAdornerLayer( listViewSortCol ).Remove( listViewSortAdorner );
                 listView.Items.SortDescriptions.Clear();
             }
 
-            ListSortDirection newDir = ListSortDirection.Ascending;
-            if( listViewSortCol == column && listViewSortAdorner.Direction == newDir )
-                newDir = ListSortDirection.Descending;
+            ListSortDirection newDirection = ListSortDirection.Ascending;
+            if( listViewSortCol == column && listViewSortAdorner.Direction == newDirection )
+            {
+                newDirection = ListSortDirection.Descending;
+            }
 
             listViewSortCol = column;
-            listViewSortAdorner = new SortAdorner( listViewSortCol, newDir );
+            listViewSortAdorner = new SortAdorner( listViewSortCol, newDirection );
             AdornerLayer.GetAdornerLayer( listViewSortCol ).Add( listViewSortAdorner );
-            listView.Items.SortDescriptions.Add( new SortDescription( sortBy, newDir ) );
+            listView.Items.SortDescriptions.Add( new SortDescription( sortBy, newDirection ) );
         }
 
         private void RemoveListItem_Click( object sender, RoutedEventArgs e )
@@ -431,11 +448,13 @@ namespace WPF_FileContentDelete
         }
     }
 
-    // 컬럼을 정렬하기 위해서 사용하는 클래스
+    // 컬럼을 정렬했을때 업, 다운 상태 표시 이미지.
     public class SortAdorner : Adorner
     {
+        // 삼각형 다운 애로우  
         private static Geometry ascGeometry = Geometry.Parse( "M 0 4 L 3.5 0 L 7 4 Z" );
 
+        // 삼각형 업 애로우  
         private static Geometry descGeometry = Geometry.Parse( "M 0 0 L 3.5 4 L 7 0 Z" );
 
         public ListSortDirection Direction { get; private set; }
@@ -450,20 +469,22 @@ namespace WPF_FileContentDelete
             base.OnRender( drawingContext );
 
             if( AdornedElement.RenderSize.Width < 20 )
+            {
                 return;
+            }
 
-            TranslateTransform transform =
-                new TranslateTransform(
-                AdornedElement.RenderSize.Width - 15,
+            TranslateTransform transform = new TranslateTransform
+                ( AdornedElement.RenderSize.Width - 15,
                 ( AdornedElement.RenderSize.Height - 5 ) / 2 );
 
             drawingContext.PushTransform( transform );
 
             Geometry geometry = ascGeometry;
             if( Direction == ListSortDirection.Descending )
+            {
                 geometry = descGeometry;
+            }
             drawingContext.DrawGeometry( Brushes.Black, null, geometry );
-
             drawingContext.Pop();
         }
     }

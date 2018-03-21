@@ -26,10 +26,15 @@
                 </ListView.ContextMenu>
                 <ListView.View>
                     <GridView AllowsColumnReorder="true" >
-                        <GridViewColumn DisplayMemberBinding="{Binding FilePath}" Header="파일 이름" Width="297"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding FileSize}" Width="110">
+                        <GridViewColumn DisplayMemberBinding="{Binding FilePath}" Width="297">
                             <GridViewColumn.Header>
-                                <GridViewColumnHeader Tag="FileSize" Click="lvUsersColumnHeader_Click">파일 크기</GridViewColumnHeader>
+                                <GridViewColumnHeader Tag="FilePath" Click="ColumnHeader_Click">파일 이름</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        
+                        <GridViewColumn DisplayMemberBinding="{Binding FileSize}" Width="110">
+                            <GridViewColumn.Header>       
+                                <GridViewColumnHeader Tag="FileSize" Click="ColumnHeader_Click">파일 크기</GridViewColumnHeader>
                             </GridViewColumn.Header>
                             <!--<GridViewColumnHeader>파일 크기
                                 <GridViewColumnHeader.ContextMenu>                                    
