@@ -31,8 +31,8 @@ namespace WPF_FileContentDelete
         public MainWindow()
         {
             // 실행 성능 향상.
-            ProfileOptimization.SetProfileRoot( @"..\..\bin\Release" );
-            ProfileOptimization.StartProfile( "profile" );
+            ProfileOptimization.SetProfileRoot(@"..\..\bin\Release");
+            ProfileOptimization.StartProfile("profile");
 
             InitializeComponent();
             InitializeOpenFileDialog();
@@ -58,47 +58,47 @@ namespace WPF_FileContentDelete
             button_Delete.IsEnabled = false;
         }
 
-        private void button_Select_Click( object sender, RoutedEventArgs e )
+        private void button_Select_Click(object sender, RoutedEventArgs e)
         {
-            if( openFileDialog.ShowDialog() == true )
+            if (openFileDialog.ShowDialog() == true)
             {
-                ListView_AddFile( openFileDialog.FileNames );
+                ListView_AddFile(openFileDialog.FileNames);
             }
         }
 
-        private async void button_ZeroFill_Click( object sender, RoutedEventArgs e )
+        private async void button_ZeroFill_Click(object sender, RoutedEventArgs e)
         {
             button_ZeroFill.IsEnabled = false;
 
             progressBar.Value = 0;
-            await DeleteFileAsync(listView.Items.Count, new Progress<int>(ReportProgress));
+            await ZeroFillFile(listView.Items.Count, new Progress<int>(ReportProgress));
 
             button_Delete.IsEnabled = true;
         }
 
-        private void Button_Delete_Click( object sender, RoutedEventArgs e )
+        private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
             string NewFileName;
             string OldFileName;
 
-            for( int i = 0; i < listView.Items.Count; i++ )
+            for (int i = 0; i < listView.Items.Count; i++)
             {
-                NewFileName = Path.GetDirectoryName( listView.Items[ i ].ToString() ) + @"\1.tmp";
-                OldFileName = listView.Items[ i ].ToString();
+                NewFileName = Path.GetDirectoryName(listView.Items[i].ToString()) + @"\1.tmp";
+                OldFileName = listView.Items[i].ToString();
 
                 // 생성, 마지막 액세스, 쓰기 현재 시간으로 설정.
-                File.SetCreationTime(OldFileName,DateTime.Now);
+                File.SetCreationTime(OldFileName, DateTime.Now);
                 File.SetLastAccessTime(OldFileName, DateTime.Now);
                 File.SetLastWriteTime(OldFileName, DateTime.Now);
 
                 // 파일 이름 변경, 삭제
-                File.Move( OldFileName, NewFileName );
-                File.Delete( NewFileName );
+                File.Move(OldFileName, NewFileName);
+                File.Delete(NewFileName);
             }
 
-            DeleteSubDirectory( DeleteSubDirs );
+            DeleteSubDirectory(DeleteSubDirs);
 
-            if( listView.Items.Count >= 0 )
+            if (listView.Items.Count >= 0)
             {
                 listView.Items.Clear();
             }
@@ -107,26 +107,26 @@ namespace WPF_FileContentDelete
             button_Delete.IsEnabled = false;
         }
 
-        private async ValueTask<bool> DeleteFileAsync( int totalCount, IProgress<int> progress )
+        private async ValueTask<bool> ZeroFillFile(int totalCount, IProgress<int> progress)
         {
             int tempCount = 1;
             try
             {
                 //await the processing and delete file logic here
-                for( int i = 0; i < totalCount; i++ )
+                for (int i = 0; i < totalCount; i++)
                 {
-                    if( progress != null )
+                    if (progress != null)
                     {
-                        progress.Report( ( tempCount * 100 / totalCount ) );
+                        progress.Report((tempCount * 100 / totalCount));
                     }
-                    await StreamFileWrite( listView.Items[ i ].ToString() );
+                    await StreamFileWrite(listView.Items[i].ToString());
                     tempCount++;
                 }
             }
-            catch( Exception e )
+            catch (Exception e)
             {
-                MessageBox.Show( e.Message );
-                Debug.WriteLine( e.Message );
+                MessageBox.Show(e.Message);
+                Debug.WriteLine(e.Message);
                 return false;
             }
 
@@ -194,10 +194,10 @@ namespace WPF_FileContentDelete
         //    return false;
         //}
 
-        private async ValueTask<bool> StreamFileWrite( string filePath )
+        private async ValueTask<bool> StreamFileWrite(string filePath)
         {
             const int blockSize = 1024 * 64; // 8; // 16; 
-            byte[] data = new byte[ blockSize ];
+            byte[] data = new byte[blockSize];
             long count = 0;
 
             //if( IsAdministrator() == false )
@@ -227,15 +227,15 @@ namespace WPF_FileContentDelete
             //                                PropagationFlags.NoPropagateInherit, AccessControlType.Allow ) );
             //dInfo.SetAccessControl( dSecurity );
 
-            using( FileStream streamWrite = File.OpenWrite( filePath ) )
+            using (FileStream streamWrite = File.OpenWrite(filePath))
             {
                 try
                 {
-                    count = ( streamWrite.Length / blockSize ) + 1;
+                    count = (streamWrite.Length / blockSize) + 1;
 
-                    for( int i = 0; i < count; i++ )
+                    for (int i = 0; i < count; i++)
                     {
-                        await streamWrite.WriteAsync( data, 0, data.Length );
+                        await streamWrite.WriteAsync(data, 0, data.Length);
                     }
 
                     streamWrite.SetLength(0);
@@ -246,9 +246,9 @@ namespace WPF_FileContentDelete
                     //    await streamWrite.WriteAsync( Last_Data, 0, Last_Data.Length );
                     //}
                 }
-                catch( Exception e )
+                catch (Exception e)
                 {
-                    MessageBox.Show( e.ToString() );
+                    MessageBox.Show(e.ToString());
                     return false;
                 }
                 return true;
@@ -256,121 +256,115 @@ namespace WPF_FileContentDelete
         }
 
         // 일반적으로 재귀 방식을 쓰지만 복잡하거나 중첩 규모가 크면 스택 오버 플로우 발생 가능성
-        private void TraverseTree( string[] SourceDirs )
+        private void TraverseTree(string[] SourceDirs)
         {
             Stack<string> dirs = new Stack<string>();
 
             // 스택에 소스 경로 넣기( Push )
-            foreach( var SourceDir in SourceDirs )
+            foreach (var SourceDir in SourceDirs)
             {
-                dirs.Push( SourceDir );
+                dirs.Push(SourceDir);
             }
 
-            while( dirs.Count > 0 )
+            while (dirs.Count > 0)
             {
-                string CurrentDir = dirs.Pop();
                 string[] SubDirs = null;
                 string[] files = null;
 
                 try
                 {
-                    SubDirs = Directory.GetDirectories( CurrentDir );
-                    foreach( var SubDir in SubDirs )
+                    string CurrentDir = dirs.Pop();
+                    SubDirs = Directory.GetDirectories(CurrentDir);
+                    foreach (var SubDir in SubDirs)
                     {
                         // 폴더 일반 속성으로 변경
-                        File.SetAttributes( SubDir, FileAttributes.Normal );
+                        File.SetAttributes(SubDir, FileAttributes.Normal);
 
                         // 스택에 폴더 넣기( 후입선출 - LIFO )
-                        DeleteSubDirs.Push( SubDir.ToString() );
+                        DeleteSubDirs.Push(SubDir.ToString());
                     }
-                    files = Directory.GetFiles( CurrentDir );
-                    ListView_AddFile( files );
+                    files = Directory.GetFiles(CurrentDir);
+                    ListView_AddFile(files);
                 }
-                catch( UnauthorizedAccessException e )
+                catch (UnauthorizedAccessException e)
                 {
-                    Debug.WriteLine( e.Message );
+                    Debug.WriteLine(e.Message);
                 }
 
-                foreach( string SubDir in SubDirs )
+                foreach (string SubDir in SubDirs)
                 {
-                    dirs.Push( SubDir );
+                    dirs.Push(SubDir);
                 }
             }
         }
 
-        private void DeleteSubDirectory( Stack<string> SubDirs )
+        private void DeleteSubDirectory(Stack<string> SubDirs)
         {
-            int Count = SubDirs.Count;
-            string NewFolderName = null;
-            string WorkDirectory = null;
-
-            string path = null;
-
-            for( int i = 0; i < Count; i++ )
+            for (int i = 0; i < SubDirs.Count; i++)
             {
                 // 전체 경로 스택에서 받기
-                WorkDirectory = SubDirs.Pop();
+                string WorkDirectory = SubDirs.Pop();
 
                 // 경로만 알아내기
-                path = Path.GetDirectoryName( WorkDirectory );
+                string path = Path.GetDirectoryName(WorkDirectory);
 
                 // 변경할 폴더 이름
-                NewFolderName = path + "\\tmp";
+                string NewFolderName = path + "\\tmp";
 
-                Directory.Move( WorkDirectory, NewFolderName );
-                Directory.Delete( NewFolderName );
+                Directory.Move(WorkDirectory, NewFolderName);
+                Directory.Delete(NewFolderName);
             }
         }
 
         // 파일 드래그 앤 드랍 
-        private void lstView_DragDrop( object sender, DragEventArgs e )
+        private void lstView_DragDrop(object sender, DragEventArgs e)
         {
             try
             {
-                if( e.Data.GetDataPresent( DataFormats.FileDrop ) )
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
-                    string[] DragDropItems = e.Data.GetData( DataFormats.FileDrop, true ) as string[];
+                    string[] DragDropItems = e.Data.GetData(DataFormats.FileDrop, true) as string[];
 
                     List<string> DropFolder = new List<string>();
                     List<string> DropFile = new List<string>();
 
                     // 폴더와 파일을 동시에 드래그 했을 때
                     // 폴더와 파일을 각 각의 리스트에 담기.
-                    foreach( var item in DragDropItems )
+                    foreach (var item in DragDropItems)
                     {
-                        if( Directory.Exists( item.ToString() ) )
+                        if (Directory.Exists(item.ToString()))
                         {
-                            DropFolder.Add( item.ToString() );
+                            DropFolder.Add(item.ToString());
                         }
                         else
                         {
-                            DropFile.Add( item.ToString() );
+                            DropFile.Add(item.ToString());
                         }
                     }
 
-                    if( DropFolder.Count != 0 )
+                    if (DropFolder.Count != 0)
                     {
-                        TraverseTree( DropFolder.ToArray() );
+                        TraverseTree(DropFolder.ToArray());
                     }
 
-                    if( DropFile.Count != 0 )
+                    if (DropFile.Count != 0)
                     {
-                        ListView_AddFile( DropFile.ToArray() );
+                        ListView_AddFile(DropFile.ToArray());
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show( ex.ToString() );
-            }            
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void ListView_AddFile( string[] files )
+        private void ListView_AddFile(string[] files)
         {
-            foreach( string file in files )
+            foreach (string file in files)
             {
                 // 리스트뷰 아이템 추가
-                long fileSize = new FileInfo( file ).Length;
+                long fileSize = new FileInfo(file).Length;
 
                 try
                 {
@@ -388,39 +382,39 @@ namespace WPF_FileContentDelete
         }
 
         // 진행바 갱신
-        void ReportProgress( int value )
+        void ReportProgress(int value)
         {
             progressBar.Value = value;
-            TaskbarItemInfo.ProgressValue = ( double )value / 100;
+            TaskbarItemInfo.ProgressValue = (double)value / 100;
         }
 
         // 파일 이름, 크기별로 정렬 가능
-        private void ColumnHeader_Click( object sender, RoutedEventArgs e )
+        private void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
             // 클릭한 헤더 Tag 알아내기
-            GridViewColumnHeader column = ( sender as GridViewColumnHeader );
+            GridViewColumnHeader column = (sender as GridViewColumnHeader);
             string sortBy = column.Tag.ToString();
 
             // 헤더 클릭 이벤트 발생시 
-            if( listViewSortCol != null )
+            if (listViewSortCol != null)
             {
-                AdornerLayer.GetAdornerLayer( listViewSortCol ).Remove( listViewSortAdorner );
+                AdornerLayer.GetAdornerLayer(listViewSortCol).Remove(listViewSortAdorner);
                 listView.Items.SortDescriptions.Clear();
             }
 
             ListSortDirection newDirection = ListSortDirection.Ascending;
-            if( listViewSortCol == column && listViewSortAdorner.Direction == newDirection )
+            if (listViewSortCol == column && listViewSortAdorner.Direction == newDirection)
             {
                 newDirection = ListSortDirection.Descending;
             }
 
             listViewSortCol = column;
-            listViewSortAdorner = new SortAdorner( listViewSortCol, newDirection );
-            AdornerLayer.GetAdornerLayer( listViewSortCol ).Add( listViewSortAdorner );
-            listView.Items.SortDescriptions.Add( new SortDescription( sortBy, newDirection ) );
+            listViewSortAdorner = new SortAdorner(listViewSortCol, newDirection);
+            AdornerLayer.GetAdornerLayer(listViewSortCol).Add(listViewSortAdorner);
+            listView.Items.SortDescriptions.Add(new SortDescription(sortBy, newDirection));
         }
 
-        private void RemoveListItem_Click( object sender, RoutedEventArgs e )
+        private void RemoveListItem_Click(object sender, RoutedEventArgs e)
         {
             // 단일 아이템
             //listView.Items.Remove( listView.SelectedItem );
@@ -429,22 +423,22 @@ namespace WPF_FileContentDelete
             try
             {
                 List<object> selectedItems = new List<object>();
-                foreach( var item in listView.SelectedItems )
+                foreach (var item in listView.SelectedItems)
                 {
-                    selectedItems.Add( item );
+                    selectedItems.Add(item);
                 }
 
                 // 리스트뷰에서 선택된 파일만 삭제
-                foreach( var item in selectedItems )
+                foreach (var item in selectedItems)
                 {
-                    listView.Items.Remove( item );
+                    listView.Items.Remove(item);
                 }
                 button_ZeroFill.IsEnabled = true;
             }
-            catch( Exception )
+            catch (Exception)
             {
-                MessageBox.Show( e.ToString() );
-            }            
+                MessageBox.Show(e.ToString());
+            }
         }
     }
 
@@ -452,39 +446,39 @@ namespace WPF_FileContentDelete
     public class SortAdorner : Adorner
     {
         // 삼각형 다운 애로우  
-        private static Geometry ascGeometry = Geometry.Parse( "M 0 4 L 3.5 0 L 7 4 Z" );
+        private static readonly Geometry ascGeometry = Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
 
         // 삼각형 업 애로우  
-        private static Geometry descGeometry = Geometry.Parse( "M 0 0 L 3.5 4 L 7 0 Z" );
+        private static readonly Geometry descGeometry = Geometry.Parse("M 0 0 L 3.5 4 L 7 0 Z");
 
         public ListSortDirection Direction { get; private set; }
 
-        public SortAdorner( UIElement element, ListSortDirection dir ) : base( element )
+        public SortAdorner(UIElement element, ListSortDirection dir) : base(element)
         {
             Direction = dir;
         }
 
-        protected override void OnRender( DrawingContext drawingContext )
+        protected override void OnRender(DrawingContext drawingContext)
         {
-            base.OnRender( drawingContext );
+            base.OnRender(drawingContext);
 
-            if( AdornedElement.RenderSize.Width < 20 )
+            if (AdornedElement.RenderSize.Width < 20)
             {
                 return;
             }
 
             TranslateTransform transform = new TranslateTransform
-                ( AdornedElement.RenderSize.Width - 15,
-                ( AdornedElement.RenderSize.Height - 5 ) / 2 );
+                (AdornedElement.RenderSize.Width - 15,
+                (AdornedElement.RenderSize.Height - 5) / 2);
 
-            drawingContext.PushTransform( transform );
+            drawingContext.PushTransform(transform);
 
             Geometry geometry = ascGeometry;
-            if( Direction == ListSortDirection.Descending )
+            if (Direction == ListSortDirection.Descending)
             {
                 geometry = descGeometry;
             }
-            drawingContext.DrawGeometry( Brushes.Black, null, geometry );
+            drawingContext.DrawGeometry(Brushes.Black, null, geometry);
             drawingContext.Pop();
         }
     }
