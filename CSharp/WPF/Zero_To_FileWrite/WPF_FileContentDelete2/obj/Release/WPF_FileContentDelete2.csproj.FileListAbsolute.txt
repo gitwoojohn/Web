@@ -71,3 +71,4 @@ D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_Fi
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.CopyComplete
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.pdb
+D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csprojAssemblyReference.cache

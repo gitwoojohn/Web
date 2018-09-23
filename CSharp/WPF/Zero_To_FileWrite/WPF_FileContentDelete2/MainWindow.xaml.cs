@@ -78,13 +78,10 @@ namespace WPF_FileContentDelete
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            string NewFileName;
-            string OldFileName;
-
             for (int i = 0; i < listView.Items.Count; i++)
             {
-                NewFileName = Path.GetDirectoryName(listView.Items[i].ToString()) + @"\1.tmp";
-                OldFileName = listView.Items[i].ToString();
+                string NewFileName = Path.GetDirectoryName(listView.Items[i].ToString()) + @"\1.tmp";
+                string OldFileName = listView.Items[i].ToString();
 
                 // 생성, 마지막 액세스, 쓰기 현재 시간으로 설정.
                 File.SetCreationTime(OldFileName, DateTime.Now);
@@ -261,7 +258,7 @@ namespace WPF_FileContentDelete
             Stack<string> dirs = new Stack<string>();
 
             // 스택에 소스 경로 넣기( Push )
-            foreach (var SourceDir in SourceDirs)
+            foreach (string SourceDir in SourceDirs)
             {
                 dirs.Push(SourceDir);
             }
@@ -300,19 +297,27 @@ namespace WPF_FileContentDelete
 
         private void DeleteSubDirectory(Stack<string> SubDirs)
         {
-            for (int i = 0; i < SubDirs.Count; i++)
+            try
             {
-                // 전체 경로 스택에서 받기
-                string WorkDirectory = SubDirs.Pop();
+                int DirCount = SubDirs.Count;
+                for (int i = 0; i < DirCount; i++)
+                {
+                    // 전체 경로 스택에서 받기
+                    string WorkDirectory = SubDirs.Pop();
 
-                // 경로만 알아내기
-                string path = Path.GetDirectoryName(WorkDirectory);
+                    // 경로만 알아내기
+                    string path = Path.GetDirectoryName(WorkDirectory);
 
-                // 변경할 폴더 이름
-                string NewFolderName = path + "\\tmp";
+                    // 변경할 폴더 이름
+                    string NewFolderName = path + "\\tmp";
 
-                Directory.Move(WorkDirectory, NewFolderName);
-                Directory.Delete(NewFolderName);
+                    Directory.Move(WorkDirectory, NewFolderName);
+                    Directory.Delete(NewFolderName);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
