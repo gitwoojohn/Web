@@ -21,6 +21,26 @@ namespace ClearLines.Anakin
         {
             Application.WorkbookActivate += Application_WorkbookActivate;
 
+            if (WbCtp.Count == 0)
+            {
+                var taskPaneView = new TaskPaneView();
+                TaskPane = TaskPaneManager.GetTaskPane("A", "시트 목록", () => taskPaneView);
+                TaskPane.Width = 250;
+                TaskPane.VisibleChanged += new EventHandler(TaskPane_VisibleChanged);
+                TaskPane.DockPosition = Office.MsoCTPDockPosition.msoCTPDockPositionLeft;
+                TaskPane.DockPositionChanged += new EventHandler(TaskPane_DockPositionChanged);
+
+                var excel = Application;
+                var anakinViewModel = new AnakinViewModel(excel);
+                var anakinView = taskPaneView.AnakinView;
+                anakinView.DataContext = anakinViewModel;
+
+                //WbCtp.Add( Wb.FullName, TaskPane);
+            }
+            else
+            {
+                //TaskPane = WbCtp;
+            }
             //var taskPaneView = new TaskPaneView();
             ////TaskPane = TaskPaneManager.GetTaskPane("A", "시트 목록", () => new TaskPaneView());
 

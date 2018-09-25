@@ -76,7 +76,7 @@ namespace WPF_FileContentDelete
             button_Delete.IsEnabled = true;
         }
 
-        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        private async void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < listView.Items.Count; i++)
             {
@@ -91,9 +91,10 @@ namespace WPF_FileContentDelete
                 // 파일 이름 변경, 삭제
                 File.Move(OldFileName, NewFileName);
                 File.Delete(NewFileName);
+                await Task.Delay(10);
             }
 
-            DeleteSubDirectory(DeleteSubDirs);
+            await DeleteSubDirectory(DeleteSubDirs);
 
             if (listView.Items.Count >= 0)
             {
@@ -295,7 +296,7 @@ namespace WPF_FileContentDelete
             }
         }
 
-        private void DeleteSubDirectory(Stack<string> SubDirs)
+        private async ValueTask<bool> DeleteSubDirectory(Stack<string> SubDirs)
         {
             try
             {
@@ -313,12 +314,16 @@ namespace WPF_FileContentDelete
 
                     Directory.Move(WorkDirectory, NewFolderName);
                     Directory.Delete(NewFolderName);
+                    await Task.Delay(10);
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                return false;
             }
+
+            return true;
         }
 
         // 파일 드래그 앤 드랍 

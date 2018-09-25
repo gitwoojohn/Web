@@ -19,7 +19,8 @@ namespace ClearLines.Anakin.TaskPane.TreeView
             Workbook = workbook;
 
             // 확장자 제외 파일명만 추출
-            name = workbook.Name.Substring(0, workbook.Name.LastIndexOf("."));
+            //name = workbook.Name.Substring(0, workbook.Name.LastIndexOf("."));
+            name = workbook.Name;
             author = workbook.Author;
 
             workbook.NewSheet += AddSheet;
@@ -72,7 +73,8 @@ namespace ClearLines.Anakin.TaskPane.TreeView
         {
             try
             {
-                Name = Workbook.Name.Substring(0, Workbook.Name.LastIndexOf("."));
+                //Name = Workbook.Name.Substring(0, Workbook.Name.LastIndexOf("."));
+                Name = Workbook.Name;
                 Author = Workbook.Author;
             }
             catch

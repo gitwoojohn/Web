@@ -30,6 +30,12 @@ namespace ClearLines.Anakin.TaskPane
             }
         }
 
+        internal Excel.Workbook SelectedWorkbook
+        {
+            get;
+            set;
+        }
+
         internal Excel.Worksheet SelectedWorksheet
         {
             get;

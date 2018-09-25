@@ -37,6 +37,23 @@ namespace ClearLines.Anakin.TaskPane
 
         private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
+            //if (DataContext is AnakinViewModel modelWorkbook)
+            //{
+            //    if (e.NewValue is WorkbookViewModel workbookViewModel)
+            //    {
+            //        Debug.WriteLine($"NewValue : {e.NewValue.ToString()} //  OldValue : {e.OldValue.ToString()}");
+
+            //        var workbook = workbookViewModel.Workbook;
+            //        Debug.WriteLine(workbook.Name);
+            //        workbook.Activate();
+            //        modelWorkbook.SelectedWorkbook = workbook;
+            //    }
+            //    else
+            //    {
+            //        modelWorkbook.SelectedWorkbook = null;
+            //    }
+            //}
+
             if (DataContext is AnakinViewModel model)
             {
                 if (e.NewValue is WorksheetViewModel worksheetViewModel)
