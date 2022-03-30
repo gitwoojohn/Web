@@ -9,35 +9,35 @@ namespace WPF_FileContentDelete.ViewModels
 
         public string FilePath
         {
-            get { return filePath; }
+            get => filePath;
             set
             {
-                if( filePath != value )
+                if (filePath != value)
                 {
                     filePath = value;
-                    OnPropertyChanged( nameof( FilePath ) );
+                    OnPropertyChanged(nameof(FilePath));
                 }
             }
         }
 
         public long FileSize
         {
-            get { return fileSize; }
+            get => fileSize;
             set
             {
-                if( fileSize != value )
+                if (fileSize != value)
                 {
                     fileSize = value;
-                    OnPropertyChanged( nameof( FileSize ) );
+                    OnPropertyChanged(nameof(FileSize));
                 }
             }
         }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged( string propertyName )
+        private void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke( this, new PropertyChangedEventArgs( propertyName ) );
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
     }

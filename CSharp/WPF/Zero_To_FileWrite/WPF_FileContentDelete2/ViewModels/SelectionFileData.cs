@@ -6,18 +6,9 @@ namespace WPF_FileContentDelete.ViewModels
 
     public class SelectionFileData
     {
-        private string _filePath;
-        private long _fileSize;
+        public string FilePath { get; }
 
-        public string FilePath
-        {
-            get { return _filePath; }
-        }
-
-        public long FileSize
-        {
-            get { return _fileSize; }
-        }
+        public long FileSize { get; }
 
         public override string ToString()
         {
@@ -26,8 +17,8 @@ namespace WPF_FileContentDelete.ViewModels
 
         public SelectionFileData( string filePath, long fileSize )
         {
-            _filePath = filePath;
-            _fileSize = fileSize;
+            FilePath = filePath;
+            FileSize = fileSize;
         }
     }
 }

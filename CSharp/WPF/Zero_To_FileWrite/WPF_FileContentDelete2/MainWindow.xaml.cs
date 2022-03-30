@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -10,7 +11,6 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shell;
-using Microsoft.Win32;
 using WPF_FileContentDelete.ViewModels;
 
 namespace WPF_FileContentDelete
@@ -20,11 +20,11 @@ namespace WPF_FileContentDelete
     /// </summary>
     public partial class MainWindow : Window
     {
-        Stack<string> DeleteSubDirs = new Stack<string>();
-        OpenFileDialog openFileDialog = null;
-
         private GridViewColumnHeader listViewSortCol = null;
         private SortAdorner listViewSortAdorner = null;
+
+        public OpenFileDialog OpenFileDialog { get; set; } = null;
+        public Stack<string> DeleteSubDirs { get; set; } = new Stack<string>();
 
         //static bool _fileContents = false;
 
@@ -43,14 +43,14 @@ namespace WPF_FileContentDelete
 
         private void InitializeOpenFileDialog()
         {
-            openFileDialog = new OpenFileDialog
+            OpenFileDialog = new OpenFileDialog
             {
                 // 여러 파일 선택하기
                 Multiselect = true,
 
                 // Set the file dialog to filter for All files.
                 Filter = "All files (*.*)|*.*",
-                InitialDirectory = @"G:\Baidu",
+                InitialDirectory = @"C:\",
                 Title = "파일 선택",
                 FileName = string.Empty
             };
@@ -60,39 +60,73 @@ namespace WPF_FileContentDelete
 
         private void button_Select_Click(object sender, RoutedEventArgs e)
         {
-            if (openFileDialog.ShowDialog() == true)
+            if (OpenFileDialog.ShowDialog() == true)
             {
-                ListView_AddFile(openFileDialog.FileNames);
+                ListView_AddFile(OpenFileDialog.FileNames);
             }
         }
 
         private async void button_ZeroFill_Click(object sender, RoutedEventArgs e)
         {
-            button_ZeroFill.IsEnabled = false;
+            if (listView.Items.Count > 0)
+            {
+                button_ZeroFill.IsEnabled = false;
 
-            progressBar.Value = 0;
-            await ZeroFillFile(listView.Items.Count, new Progress<int>(ReportProgress));
+                progressBar.Value = 0;
+                await ZeroFillFile(listView.Items.Count, new Progress<int>(ReportProgress));
 
-            button_Delete.IsEnabled = true;
+                button_Delete.IsEnabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Zero Fill 할 파일이 없습니다.");
+            }
         }
 
         private async void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < listView.Items.Count; i++)
+            button_Delete.IsEnabled = false;
+
+            progressBar.Value = 0;
+            await DeleteFileList(listView.Items.Count, new Progress<int>(ReportProgress));
+
+            button_ZeroFill.IsEnabled = true;
+        }
+
+        private async ValueTask<bool> DeleteFileList(int totalCount, IProgress<int> progress)
+        {
+            int tempCount = 1;
+            try
             {
-                string NewFileName = Path.GetDirectoryName(listView.Items[i].ToString()) + @"\1.tmp";
-                string OldFileName = listView.Items[i].ToString();
+                for (int i = 0; i < totalCount; i++)
+                {
+                    string NewFileName = Path.GetDirectoryName(listView.Items[i].ToString()) + @"\1.tmp";
+                    string OldFileName = listView.Items[i].ToString();
 
-                // 생성, 마지막 액세스, 쓰기 현재 시간으로 설정.
-                File.SetCreationTime(OldFileName, DateTime.Now);
-                File.SetLastAccessTime(OldFileName, DateTime.Now);
-                File.SetLastWriteTime(OldFileName, DateTime.Now);
+                    // 생성, 마지막 액세스, 쓰기 현재 시간으로 설정.
+                    File.SetCreationTime(OldFileName, DateTime.Now);
+                    File.SetLastAccessTime(OldFileName, DateTime.Now);
+                    File.SetLastWriteTime(OldFileName, DateTime.Now);
 
-                // 파일 이름 변경, 삭제
-                File.Move(OldFileName, NewFileName);
-                File.Delete(NewFileName);
-                await Task.Delay(10);
+                    // 파일 이름 변경, 삭제
+                    File.Move(OldFileName, NewFileName);
+                    File.Delete(NewFileName);
+
+                    if (progress != null)
+                    {
+                        progress.Report((tempCount * 100 / totalCount));
+                    }
+                    await Task.Delay(10);
+                    tempCount++;
+                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Debug.WriteLine(e.Message);
+                return false;
+            }
+            await Task.Delay(10);
 
             await DeleteSubDirectory(DeleteSubDirs);
 
@@ -101,8 +135,7 @@ namespace WPF_FileContentDelete
                 listView.Items.Clear();
             }
 
-            button_ZeroFill.IsEnabled = true;
-            button_Delete.IsEnabled = false;
+            return true;
         }
 
         private async ValueTask<bool> ZeroFillFile(int totalCount, IProgress<int> progress)
@@ -196,7 +229,6 @@ namespace WPF_FileContentDelete
         {
             const int blockSize = 1024 * 64; // 8; // 16; 
             byte[] data = new byte[blockSize];
-            long count = 0;
 
             //if( IsAdministrator() == false )
             //{
@@ -229,7 +261,7 @@ namespace WPF_FileContentDelete
             {
                 try
                 {
-                    count = (streamWrite.Length / blockSize) + 1;
+                    long count = (streamWrite.Length / blockSize) + 1;
 
                     for (int i = 0; i < count; i++)
                     {
@@ -267,7 +299,6 @@ namespace WPF_FileContentDelete
             while (dirs.Count > 0)
             {
                 string[] SubDirs = null;
-                string[] files = null;
 
                 try
                 {
@@ -281,7 +312,7 @@ namespace WPF_FileContentDelete
                         // 스택에 폴더 넣기( 후입선출 - LIFO )
                         DeleteSubDirs.Push(SubDir.ToString());
                     }
-                    files = Directory.GetFiles(CurrentDir);
+                    string[] files = Directory.GetFiles(CurrentDir);
                     ListView_AddFile(files);
                 }
                 catch (UnauthorizedAccessException e)
@@ -301,6 +332,7 @@ namespace WPF_FileContentDelete
             try
             {
                 int DirCount = SubDirs.Count;
+
                 for (int i = 0; i < DirCount; i++)
                 {
                     // 전체 경로 스택에서 받기
@@ -401,6 +433,11 @@ namespace WPF_FileContentDelete
         // 파일 이름, 크기별로 정렬 가능
         private void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
+            ColumnHeaderSort(sender);
+        }
+
+        private void ColumnHeaderSort(object sender)
+        {
             // 클릭한 헤더 Tag 알아내기
             GridViewColumnHeader column = (sender as GridViewColumnHeader);
             string sortBy = column.Tag.ToString();
@@ -426,6 +463,11 @@ namespace WPF_FileContentDelete
 
         private void RemoveListItem_Click(object sender, RoutedEventArgs e)
         {
+            RemoveAllListItem(e);
+        }
+
+        private void RemoveAllListItem(RoutedEventArgs e)
+        {
             // 단일 아이템
             //listView.Items.Remove( listView.SelectedItem );
 
@@ -450,46 +492,46 @@ namespace WPF_FileContentDelete
                 MessageBox.Show(e.ToString());
             }
         }
-    }
 
-    // 컬럼을 정렬했을때 업, 다운 상태 표시 이미지.
-    public class SortAdorner : Adorner
-    {
-        // 삼각형 다운 애로우  
-        private static readonly Geometry ascGeometry = Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
-
-        // 삼각형 업 애로우  
-        private static readonly Geometry descGeometry = Geometry.Parse("M 0 0 L 3.5 4 L 7 0 Z");
-
-        public ListSortDirection Direction { get; private set; }
-
-        public SortAdorner(UIElement element, ListSortDirection dir) : base(element)
+        // 컬럼을 정렬했을때 업, 다운 상태 표시 이미지.
+        public class SortAdorner : Adorner
         {
-            Direction = dir;
-        }
+            // 삼각형 다운 애로우  
+            private static readonly Geometry ascGeometry = Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
 
-        protected override void OnRender(DrawingContext drawingContext)
-        {
-            base.OnRender(drawingContext);
+            // 삼각형 업 애로우  
+            private static readonly Geometry descGeometry = Geometry.Parse("M 0 0 L 3.5 4 L 7 0 Z");
 
-            if (AdornedElement.RenderSize.Width < 20)
+            public ListSortDirection Direction { get; private set; }
+
+            public SortAdorner(UIElement element, ListSortDirection dir) : base(element)
             {
-                return;
+                Direction = dir;
             }
 
-            TranslateTransform transform = new TranslateTransform
-                (AdornedElement.RenderSize.Width - 15,
-                (AdornedElement.RenderSize.Height - 5) / 2);
-
-            drawingContext.PushTransform(transform);
-
-            Geometry geometry = ascGeometry;
-            if (Direction == ListSortDirection.Descending)
+            protected override void OnRender(DrawingContext drawingContext)
             {
-                geometry = descGeometry;
+                base.OnRender(drawingContext);
+
+                if (AdornedElement.RenderSize.Width < 20)
+                {
+                    return;
+                }
+
+                TranslateTransform transform = new TranslateTransform
+                    (AdornedElement.RenderSize.Width - 15,
+                    (AdornedElement.RenderSize.Height - 5) / 2);
+
+                drawingContext.PushTransform(transform);
+
+                Geometry geometry = ascGeometry;
+                if (Direction == ListSortDirection.Descending)
+                {
+                    geometry = descGeometry;
+                }
+                drawingContext.DrawGeometry(Brushes.Black, null, geometry);
+                drawingContext.Pop();
             }
-            drawingContext.DrawGeometry(Brushes.Black, null, geometry);
-            drawingContext.Pop();
         }
     }
 }

@@ -1,0 +1,2 @@
+C:\Users\Sapphire\Source\Repos\Youtube_WebPlayer_ExcelAddIn\obj\Debug\Youtube_WebPlayer_ExcelAddIn.csproj.AssemblyReference.cache
+C:\Users\Sapphire\Source\Repos\Youtube_WebPlayer_ExcelAddIn\obj\Debug\Youtube_WebPlayer_ExcelAddIn.csproj.CoreCompileInputs.cache

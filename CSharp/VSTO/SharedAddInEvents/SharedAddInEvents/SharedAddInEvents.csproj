@@ -11,7 +11,7 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>SharedAddInEvents</AssemblyName>
     <RootNamespace>SharedAddInEvents</RootNamespace>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xsi:type="ContentApp">
+
+  <!-- 기본 설정 시작: 재정의가 지정되지 않은 한 모든 Office 버전에 사용되는 추가 기능 메타데이터입니다. -->
+
+  <!-- 중요! ID는 추가 기능별로 고유해야 합니다. 이 매니페스트를 다시 사용하려면 이 ID를 새 GUID로 변경해야 합니다. -->
+  <Id>970dcd20-d641-4d4d-9199-de57ef7caf1c</Id>
+
+  <!--버전. 버전 변경이 있을 경우 트리거되는 저장소에서만 업데이트됩니다. -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>It's Me</ProviderName>
+  <DefaultLocale>ko-KR</DefaultLocale>
+  <!-- 추가 기능의 표시 이름. 저장소에서 사용되며, 추가 기능 대화 상자와 같은 Office UI에 다양하게 배치됩니다. -->
+  <DisplayName DefaultValue="Youtube_WebPlayer_ExcelAddIn" />
+  <Description DefaultValue="Youtube_WebPlayer_ExcelAddIn"/>
+  <!-- 추가 기능 아이콘. 설치 화면과 추가 기능 대화 상자에서 사용됩니다. -->
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+  <SupportUrl DefaultValue="http://www.app-support.com" />
+  <!-- 탐색 시 허용될 도메인. 예를 들어 ShowTaskpane을 사용하고 href 링크가 포함되어 있으면 해당 도메인이 이 목록에 있는 경우에만 탐색이 허용됩니다. -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
+  <!--기본 설정을 종료합니다. -->
+  
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/Home/Home.html" />
+    <RequestedWidth>600</RequestedWidth>
+    <RequestedHeight>400</RequestedHeight>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+</OfficeApp>

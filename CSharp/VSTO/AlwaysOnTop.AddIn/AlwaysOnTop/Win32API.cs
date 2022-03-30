@@ -45,6 +45,5 @@ namespace AlwaysOnTop
 
             SetWindowPos(hwnd, xStype, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
         }
-
     }
 }

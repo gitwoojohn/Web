@@ -72,3 +72,35 @@ D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_Fi
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.pdb
 D:\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csprojAssemblyReference.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\WPF_FileContentDelete.exe.config
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\WPF_FileContentDelete.exe
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\WPF_FileContentDelete.pdb
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Data.Common.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Diagnostics.StackTrace.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Diagnostics.Tracing.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Globalization.Extensions.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.IO.Compression.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Net.Http.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Net.Sockets.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Runtime.Serialization.Primitives.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Security.SecureString.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Threading.Overlapped.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Xml.XPath.XDocument.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.AssemblyReference.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.SuggestedBindingRedirects.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe.config
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\MainWindow.g.cs
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\App.g.cs
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete_MarkupCompile.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete_MarkupCompile.lref
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\MainWindow.baml
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.g.resources
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.Properties.Resources.resources
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.GenerateResource.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.CoreCompileInputs.cache
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete2.csproj.CopyComplete
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.exe
+C:\새 폴더\GitHub\CSharp\WPF\Zero_To_FileWrite\WPF_FileContentDelete2\obj\Release\WPF_FileContentDelete.pdb

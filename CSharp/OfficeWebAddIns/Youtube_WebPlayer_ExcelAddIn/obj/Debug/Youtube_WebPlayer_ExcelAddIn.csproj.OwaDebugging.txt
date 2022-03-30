@@ -1,0 +1,7 @@
+False
+0e896fda-c328-446e-ac12-03b770c22156a903efd1-ca3a-4102-a3a8-b2f57acf1669
+{29b4b3ae-e344-4c28-88cf-a0a3f7020839}{7ca74453-668e-431b-93f2-33cd71307354}
+{bd8b8386-0476-4e37-a6cd-ca87ee29b588}
+1.0.0.0
+Youtube_WebPlayer_ExcelAddIn
+_layouts/15/
